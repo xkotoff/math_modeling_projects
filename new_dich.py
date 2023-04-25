@@ -99,7 +99,7 @@ for k in range(N - 1):
 
     vx10 = sol[1, 1]
     if tau[k] > 50:
-        vx20 = -5
+     #   vx20 = -5
         print('START')
     else:
         vx20 = 0
