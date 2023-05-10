@@ -60,14 +60,14 @@ mass1 = 1
 mass2 = 1
 radius = 20
 
-x10 = -500
-vx10 = 1
-y10 = 1
+x10 = 5000
+vx10 = 0.04
+y10 = 7800
 vy10 = 0
 
-x20 = 500
-vx20 = 0
-y20 = 1
+x20 = 10000
+vx20 = 10
+y20 = 7800
 vy20 = 0
 
 # Массивы для записи итоговых координат объектов
@@ -102,7 +102,7 @@ for k in range(N - 1):
      #   vx20 = -5
         print('START')
     else:
-        vx20 = 0
+        vx20 = -10
     res = collision(x10, vx10, x20, vx20, y10, vy10, y20, vy20, radius, mass1, mass2)
     vx10 = res[0]
     vy10 = res[1]
@@ -114,8 +114,8 @@ fig, ax = plt.subplots()
 
 ball_1, = plt.plot([], [], 'o', color='r', ms=25)
 ball_2, = plt.plot([], [], '<', color='r', ms=5)
-ax.set_xlim(-500, 500)
-ax.set_ylim(-10, 2)
+ax.set_xlim(3000, 11299)
+ax.set_ylim(1, 8000)
 
 
 def animate(i):
